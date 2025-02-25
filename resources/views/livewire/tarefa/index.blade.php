@@ -22,7 +22,7 @@
                                     wire:click="abrirModalVisualizar({{$t->id}})">Visualizar</button>
 
                                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#editModal">Editar</button>
+                                    data-bs-target="#editModal" wire:click="abrirModalEdicao({{$t->id}})">Editar</button>
 
                                 <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                     data-bs-target="#deleteModal" wire:click="abrirModalExclusao({{ $t->id }})"
@@ -34,6 +34,8 @@
             </table>
         </div>
     </div>
+
+ <livewire:tarefa.edit>
 
     <div wire:ignore.self class="modal fade" id="deleteModal"
     tabindex="-1" aria-labelledby="deleteModalLabel"
